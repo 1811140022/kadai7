@@ -1,0 +1,9 @@
+<%= link_to '商品を追加', new_product_path %>
+<%= link_to '戻る', top_main_path %>
+<hr />
+<% @products.each do |p| %>
+    <%= p.name%> <%= p.price %>円
+    <br />
+    <%= link_to '商品を削除', product_path(p.id), method: :delete %>
+    <br />
+<% end %>
